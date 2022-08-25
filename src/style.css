@@ -83,13 +83,13 @@ h2 {
   border-radius: 3px;
 }
 
-.score {
+li {
   padding: 4px;
   font-family: 'DynaPuff', cursive;
   outline: transparent;
 }
 
-.score:nth-child(even) {
+li:nth-child(even) {
   background-color: rgb(0, 0, 0, 0.15);
 }
 
