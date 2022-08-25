@@ -13,6 +13,10 @@
 - JS
 - CSS
 
+## Live Demo
+
+https://lokurasrlz.github.io/dist/
+
 ## Getting Started
 
 ### To launch the project locally:
