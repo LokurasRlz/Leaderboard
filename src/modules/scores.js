@@ -4,6 +4,6 @@ const dynamicScore = (userValue, scoreValue) => {
   scoreItem.classList.add('li');
   scoreItem.innerHTML += `${userValue}: ${scoreValue}`;
   scoreList.appendChild(scoreItem);
-}
+};
 
 export default dynamicScore;
