@@ -55,4 +55,4 @@ document.addEventListener('mousemove', () => {
   song.play();
 });
 
-window.addEventListener('load', () => { refreshBtn.dispatchEvent(new Event('click')); song.loop = true; });
+window.addEventListener('load', () => { refreshButton.dispatchEvent(new Event('click')); song.loop = true; });
