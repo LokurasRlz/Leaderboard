@@ -1,6 +1,10 @@
 import './style.css';
 import dynamicScore from './modules/scores.js';
+import sound from './audio/scary.mp3';
 
+const song = new Audio(sound);
+const toggleMute = document.getElementById('toggle-mute');
+let isMuted = true;
 const originalURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api';
 const id = '49UE7WNSjc9vGKaTdRhI';
 const refreshButton = document.getElementById('refresh');
@@ -40,3 +44,15 @@ const receiveData = async () => {
   score.value = null;
 };
 refreshButton.addEventListener('click', receiveData);
+
+toggleMute.addEventListener('click', () => {
+  isMuted = !isMuted;
+  toggleMute.style.filter = `invert(${isMuted * 1 + !isMuted * 0})`;
+  song.muted = isMuted;
+});
+
+document.addEventListener('mousemove', () => {
+  song.play();
+});
+
+window.addEventListener('load', () => { refreshButton.dispatchEvent(new Event('click')); song.loop = true; });
